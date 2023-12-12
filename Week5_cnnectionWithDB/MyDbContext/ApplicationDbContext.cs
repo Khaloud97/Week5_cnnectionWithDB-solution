@@ -15,6 +15,6 @@ namespace Week5_cnnectionWithDB.MyDbContext
             optionsBuilder.UseSqlServer("Data Source=DESKTOP-ENAGUK3\\MSSQLS;Initial Catalog=MakeenCompany;Integrated Security=True;");
         }
         public DbSet<Employee> Employees { get; set; }
-
+        public DbSet<Departments> Department { get; set; }
     }
 }
