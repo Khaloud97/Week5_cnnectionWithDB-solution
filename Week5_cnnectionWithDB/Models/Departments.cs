@@ -12,7 +12,7 @@ namespace Week5_cnnectionWithDB.Models
     internal class Departments
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // use this when we declear the id name diffrent class id name and will Generated
         public int DepId { get; set; }
 
         [Required]
@@ -22,7 +22,7 @@ namespace Week5_cnnectionWithDB.Models
         [Range(1,5)]
         public int floor { get; set; }
 
-       
+        public ICollection<Employee> Employee { get; set; } = new List<Employee>(); // one to many relationship {Departments(1) <==> Employee(m)}
 
     }
 }

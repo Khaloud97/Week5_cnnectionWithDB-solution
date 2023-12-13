@@ -14,7 +14,17 @@ namespace Week5_cnnectionWithDB.MyDbContext
         {
             optionsBuilder.UseSqlServer("Data Source=DESKTOP-ENAGUK3\\MSSQLS;Initial Catalog=MakeenCompany;Integrated Security=True;");
         }
+
+        // using fluent api
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+           // modelBuilder.Entity<Projects>
+
+        }
+        
+            
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Departments> Department { get; set; }
+        public DbSet<Projects> Projects { get; set; }
     }
 }
